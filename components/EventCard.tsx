@@ -24,10 +24,10 @@ const EventCard = ({title, image, slug, location, date, time}: Props) => {
         });
     };
 
-    return (
-        <Link href={`/events/${slug}`} id={"event-card"} onClick={handleClick}>
+    return (// <div className="flex flex-row >
+        <Link href={`/events/${slug}`} className="event-card " onClick={handleClick}>
             <Image src={image} alt={title} width={410} height={300} className="poster"></Image>
-            <div className="flex flex-row gap-2">
+            <div className="flex flex-row flex-wrap gap-2">
                 <Image src="/icons/pin.svg" alt="location" width={40} height={40}/>
                 <p >{location}</p>
             </div>
@@ -44,6 +44,7 @@ const EventCard = ({title, image, slug, location, date, time}: Props) => {
 
             </div>
         </Link>
+       // </div>
     )
 }
 export default EventCard;

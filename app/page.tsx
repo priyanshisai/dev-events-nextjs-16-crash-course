@@ -15,7 +15,7 @@ const Page = () => {
                 <h3>
                     Featured Events
                 </h3>
-                <ul className="event">
+                <ul className="event flex flex-row flex-wrap gap-6">
                     {events.map((event) =>
                         (<li key={event.title}>
                             <EventCard {...event}>
